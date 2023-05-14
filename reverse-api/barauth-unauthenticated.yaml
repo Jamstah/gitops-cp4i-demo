@@ -1,0 +1,18 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: barauth-unauthenticated
+data:
+  configuration: >-
+    eyJhdXRoVHlwZSI6IkJBU0lDX0FVVEgiLCJjcmVkZW50aWFscyI6eyJ1c2VybmFtZSI6IiIsInBhc3N3b3JkIjoiIn19Cg==
+type: Opaque
+---
+apiVersion: appconnect.ibm.com/v1beta1
+kind: Configuration
+metadata:
+  name: barauth-unauthenticated
+spec:
+  secretName: barauth-unauthenticated
+  type: barauth
+  version: 12.0.8.0-r2
+
