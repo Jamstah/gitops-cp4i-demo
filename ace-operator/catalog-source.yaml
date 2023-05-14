@@ -1,0 +1,12 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  name: ibm-appconnect
+spec:
+  displayName: IBM App Connect
+  image: cp.stg.icr.io/cp/appconnect-operator-catalog:latest-cd
+  publisher: IBM
+  sourceType: grpc
+
