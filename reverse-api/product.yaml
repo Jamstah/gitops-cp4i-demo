@@ -1,0 +1,28 @@
+apiVersion: apiconnect.ibm.com/v1beta1
+kind: Product
+metadata:
+  name: reverse
+spec:
+  state: Published
+  definition:
+    product: 1.0.0
+    info:
+      name: Reverse
+      title: Reverse
+      version: "1.0"
+    plans:
+      default-plan:
+        approval: false
+        description: Default Plan
+        rate-limits:
+          default:
+            value: 100/1hour
+        title: Default Plan
+  apis:
+    integrationRuntimes:
+    - name: reverse
+  share:
+    apim:
+      catalog: stringtools
+      credentialsSecret: apim-credentials
+      providerOrg: jammy
