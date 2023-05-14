@@ -1,0 +1,16 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationRuntime
+metadata:
+  name: reverse
+spec:
+  license:
+    accept: true
+    license: L-MJTK-WUU8HE
+    use: CloudPakForIntegrationNonProductionFREE
+  routes:
+    disabled: true
+  version: '12.0'
+  barURL:
+    - https://github.com/Jamstah/gitops-cp4i-demo/raw/main/reverse-api/reverseproject.generated.bar
+  configurations:
+    - barauth-unauthenticated
