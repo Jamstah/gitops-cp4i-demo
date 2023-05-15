@@ -1,0 +1,59 @@
+apiVersion: integration.ibm.com/v1beta1
+kind: IntegrationAssembly
+metadata:
+  name: ia-demo
+spec:
+  license:
+    accept: true
+    license: L-RJON-CJR2RX
+    use: CloudPakForIntegrationNonProduction
+  managedIntegrations:
+    list:
+      - kind: IntegrationRuntime
+        metadata:
+          name: ia-demo
+        spec:
+          barURL:
+            - >-
+              https://github.com/DanRoseus/cp4i-examples/blob/main/bars/test-1.bar?raw=true
+            - >-
+              https://github.com/DanRoseus/cp4i-examples/blob/main/bars/test-2.bar?raw=true
+          configurations:
+            - barauth-unauthenticated
+          forceFlowBasicAuth:
+            enabled: true
+          forceFlowsHTTPS:
+            enabled: true
+          routes:
+            disabled: true
+      - kind: Product
+        metadata:
+          name: ia-demo
+        spec:
+          apis:
+            integrationRuntimes:
+              - name: ia-demo
+          definition:
+            info:
+              name: IA-Demo
+              title: IA-Demo
+              version: '1.0'
+            plans:
+              default-plan:
+                approval: false
+                description: Default Plan
+                rate-limits:
+                  default:
+                    value: 100/1hour
+                title: Default Plan
+            product: 1.0.0
+          share:
+            apim:
+              catalog: demo
+              credentialsSecret: apim-credentials
+              providerOrg: jammy
+          state: Published
+  storage:
+    readWriteOnce:
+      class: rook-ceph-block-wffc
+  version: next
