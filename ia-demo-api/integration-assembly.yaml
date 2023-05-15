@@ -7,6 +7,11 @@ spec:
     accept: true
     license: L-RJON-CJR2RX
     use: CloudPakForIntegrationNonProduction
+  managedInstances:
+    list:
+      - kind: QueueManager
+        metadata:
+          name: demo-api-qm
   managedIntegrations:
     list:
       - kind: IntegrationRuntime
