@@ -19,7 +19,7 @@ spec:
             - >-
               https://github.com/DanRoseus/cp4i-examples/blob/main/bars/test-2.bar?raw=true
           configurations:
-            - barauth-unauthenticated
+            - ia-barauth-unauthenticated
           forceFlowBasicAuth:
             enabled: true
           forceFlowsHTTPS:
