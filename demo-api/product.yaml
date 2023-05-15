@@ -1,14 +1,14 @@
 apiVersion: apiconnect.ibm.com/v1beta1
 kind: Product
 metadata:
-  name: reverse
+  name: demo
 spec:
   state: Published
   definition:
     product: 1.0.0
     info:
-      name: Reverse
-      title: Reverse
+      name: Demo
+      title: Demo
       version: "1.0"
     plans:
       default-plan:
@@ -20,9 +20,9 @@ spec:
         title: Default Plan
   apis:
     integrationRuntimes:
-    - name: reverse
+    - name: demo
   share:
     apim:
-      catalog: stringtools
+      catalog: demo
       credentialsSecret: apim-credentials
       providerOrg: jammy
