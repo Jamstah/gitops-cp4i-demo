@@ -10,9 +10,9 @@ spec:
   - barauth-unauthenticated
   license:
     accept: true
-    license: L-MJTK-WUU8HE
+    license: L-AWVV-J3WMK6
     use: CloudPakForIntegrationNonProductionFREE
-  version: "12.0"
+  version: "12.0.8"
   routes:
     disabled: true
   forceFlowsHTTPS:
