@@ -56,7 +56,7 @@ spec:
             apim:
               catalog: demo
               credentialsSecret: apim-credentials
-              providerOrg: jammy
+              providerOrg: demo
           state: Published
   storage:
     readWriteOnce:
