@@ -60,5 +60,5 @@ spec:
           state: Published
   storage:
     readWriteOnce:
-      class: rook-ceph-block-wffc
+      class: block-storage
   version: 16.1.0
