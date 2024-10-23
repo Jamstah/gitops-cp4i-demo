@@ -61,4 +61,4 @@ spec:
   storage:
     readWriteOnce:
       class: rook-ceph-block-wffc
-  version: next
+  version: 16.1.0
